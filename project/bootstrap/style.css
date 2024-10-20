@@ -1,0 +1,118 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+}
+
+
+
+.img1 {
+    background: url("https://th.bing.com/th/id/OIP.RsXuNEl_AdxymZIT3o61EgHaE8?rs=1&pid=ImgDetMain") no-repeat center;
+    background-size: cover;
+}
+
+.img2 {
+    background: url("https://img.freepik.com/free-photo/workers-it-company-working-computer_1303-19428.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.img3 {
+    background: url("https://b2bblogassets.airtel.in/wp-content/uploads/2022/06/startup-company-scaled.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.img4{
+    background: url("https://1.bp.blogspot.com/-zxPJkNIfRVc/XPoEZ063lOI/AAAAAAAAAAc/22S7o0ABrz82JNjcQj9afnFVkhu8eRqOgCLcBGAs/s1600/Best-IT-Company.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.carousel-item {
+    position: relative;
+    z-index: 1;
+    padding: 220px 0;
+}
+
+@media (max-width:576px) {
+    .carousel-item {
+        padding: 100px 0;
+    }
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.733);
+    z-index: -1;
+}
+
+.card .carding {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    transition: 1s ease;
+    vertical-align: middle;
+}
+
+.card:hover img {
+    scale: 1.1;
+}
+
+.it{
+    font-size: 20px;
+}
+
+.it h2{
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.card-body i{
+    font-size: 25px;
+}
+
+.card1 img{
+    transition: 2s ease;
+    vertical-align:bottom;
+}
+
+.c1:hover img {
+    color: blue;
+    scale: 1.1;
+}
+
+.nav-tabs .nav-link{
+    background-color: crimson;
+    color: white;
+}
+
+.card2{
+    transition: 1s ease;
+    vertical-align: middle;
+}
+
+.card2-body{
+    font-size: 20px;
+}
+.card2:hover {
+    background-image: url("https://p.w3layouts.com/demos_new/template_demo/25-03-2021/excellence-liberty-demo_Free/1276368182/web/assets/images/s1.jpg");
+    background-size: cover;
+    filter:grayscale(100%);
+    scale: 1.1;
+}
+
+.card3-body h5:hover{
+    color: rgba(219, 58, 58, 0.893);
+}
+
+.card3 img{
+    transition: 1s ease;
+    vertical-align: middle;
+}
+
