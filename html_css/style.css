@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+}
+
+.header{
+    background-image: url("https://chameleon-works.com/wp-content/uploads/2019/03/CW1.jpg");
+    background-size: 100%;
+}
+
+.description{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
+}
+
+.line p1{
+    color: rgba(255, 170, 0, 0.947);
+}
+
+.icon i{
+   margin: 10px;
+   color: white;
+}
+
+.menu{
+    background-color: rgba(232, 225, 216, 0.426);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 50px 150px;
+    position: sticky;
+}
+
+.link a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+}
+
+.link a:nth-child(1){
+    color: yellow;
+}
+
+.link a:hover{
+    color: yellow;
+}
+
+.paragraph{
+    margin: 150px;
+    margin-left: 150px;
+    padding: 10px;
+    width: 600px;
+    height: 100px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.paragraph p1{
+    color: rgba(80, 98, 171, 0.83);
+}
+
+.paragraph p1:hover{
+    color: yellow;
+}
+
+.paragraph h1{
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.paragraph p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+}
+
+.btn button{
+    color: white;
+    width: 150px;
+    background-color: rgb(218, 49, 16);
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.box{
+    margin: 200px 150px;
+    margin-bottom: 1px;
+    display: flex;
+    gap: 20px;
+}
+
+.div {
+    margin-bottom: 50px;
+    border-radius: 20px;
+    width: 350px;
+    height: 200px;
+    background-color: rgb(218, 49, 16);
+    padding: 20px;
+    text-align: center;
+}
+
+.div .icon{
+    font-size: 35px;
+    padding: 10px;
+}
+.div .icon i{
+    color:rgba(255, 170, 0, 0.947);;
+}
+.div h2{
+    color: white;
+    padding: 10px;
+}
+
+.div p{
+    color: white;
+}
+
+/*page-2 */
+
+.page2{
+    background-image: url("https://th.bing.com/th/id/OIP.qCJ2RvNldwIrg9mUr1HpvQHaE8?rs=1&pid=ImgDetMain");
+    filter: grayscale(50%);
+}
+
+.heading{
+    margin: 0 150px;
+    border-bottom: 2px solid rgba(83, 83, 83, 0.881);
+}
+
+.page2 .heading h1{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.boxes{
+    margin: 50px 150px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout{
+    border-radius: 30px;
+    padding: 40px;
+    background-color: white;
+    gap: 10px;
+    margin: 20px;
+    height: 300px;
+}
+
+button{
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(218, 49, 16);
+    border: rgb(218, 49, 16);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.layout h1{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.layout p{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.category{
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+
+.bx{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.bx h3{
+    color: rgba(0, 162, 255, 0.844);
+}
+
+.dt{
+    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date{
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.bx h1{
+    font-size: 20px;
+}
+
+/* page -3 */
+
+.page3{
+    background-image: url("https://land8.com/wp-content/uploads/2015/05/working-as-a-team.jpg");
+    background-size: 100%;
+    filter: grayscale(50%);
+}
+
+.about{
+    margin: 0 150px;
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    gap: 100px;
+}
+
+.degree{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.degree .dg{
+    background-color: #f0f0f05a;
+    padding: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.dg h2{
+    margin: 20px;
+}
+
+.edu{
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    border-bottom: 2px solid rgba(83, 83, 83, 0.881);
+}
+
+.edu h2{
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    color: rgba(255, 170, 0, 0.947);
+}
+
+.edu p{
+    font-size: 20px;
+    margin: 30px 30px;
+    margin-top: 10px;
+}
+
+.edu p1{
+    color: rgb(47, 80, 202) ;
+}
+
+.edu p1:hover{
+    color: rgba(255, 170, 0, 0.947);
+}
+
+.edu h1{
+    padding-bottom: 20px;
+    margin: 10px 25px;
+    font-size: 25px;
+}
+
+.ed1{
+    border-bottom: 2px solid rgba(130, 130, 130, 0.777); 
+}
+.ed2{
+    border-bottom: 2px solid rgba(130, 130, 130, 0.777); 
+}
+
+/* page-4 */
+
+.page4{
+    background-image: url("https://th.bing.com/th/id/OIP.Xux3-onLZ7eL_IUAYzSDIwHaEK?rs=1&pid=ImgDetMain");
+    padding: 120px 150px;
+}
+
+.head{
+    color: white;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(130, 130, 130, 0.777); 
+}
+
+.course{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-top: 150px ;
+}
+
+.c1{
+    background-color: white;
+    width: 270px;
+    height: 350px;
+}
+
+.c1 h2{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.ic i{
+    color:rgba(255, 170, 0, 0.947);
+}
+
+.ic{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* page-5 */
+
+.page5{
+    background-image: url("https://wallpapercave.com/wp/wp7462627.jpg");
+    display: flex;
+    padding: 150px;
+    background-size: 100%;
+}
+
+.number h1{
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.num{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+
+.percent{
+    background-color: #f0f0f079;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.percent h2{
+    color: rgba(255, 170, 0, 0.947);
+    font-size: 40px;
+    margin: 25px;
+}
+
+.percent h3{
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.video{
+    margin-top: 220px;
+    margin-right: 30px;
+}
+
+/* page6 */
+
+.page6{
+    background-image: url("https://th.bing.com/th/id/OIP.Xux3-onLZ7eL_IUAYzSDIwHaEK?rs=1&pid=ImgDetMain");
+    padding: 150px;
+    
+}
+
+.form2{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.fdb{
+    background-color: white;
+    padding: 50px;
+    width: 1100px;
+    border-radius: 30px;
+}
+
+.div3 h1{
+    margin: 25px;
+    padding: 2px;
+    border-bottom: 2px solid rgba(83, 83, 83, 0.881);
+}
+
+.frm{
+    padding: 20px;
+}
+
+.f [type="text"]{
+    border-radius: 10px;
+    padding: 5px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.f [type="email"]{
+    border-radius: 10px;
+    padding: 5px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.f1 textarea{
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    width: 97%;
+    height: 100px;
+}
+
+.info{
+    background-color: rgb(218, 49, 16);
+    width: 250px;
+    height: 420px;
+    border-radius: 20px;
+    padding: 50px;
+    color: white;
+    font-size: 14px;
+}
+
+.info .ph {
+    padding: 10px;
+    border-bottom: 2px solid rgba(80, 78, 78, 0.777); 
+}
+
+.email{
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(80, 78, 78, 0.777);
+}
+
+.add{
+    padding: 10px;
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(80, 78, 78, 0.777);
+}
+
+.url{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer{
+    background-image: url("https://th.bing.com/th/id/OIP.Xux3-onLZ7eL_IUAYzSDIwHaEK?rs=1&pid=ImgDetMain");
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.footer h3{
+    padding-bottom: 3px;
+}
+
+.footer p1{
+    font-size: 15px;
+    color:rgba(255, 170, 0, 0.947) ;
+}
+
+.footer p{
+    padding: 5px;
+    font-size: 15px;
+}
