@@ -12,24 +12,25 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [orders, setOrders] = useState([]);
 
-    const addToCart = async (itemId, size) => {
+    // ✅ Load orders from local storage on mount
+    useEffect(() => {
+        const savedOrders = localStorage.getItem("orders");
+        if (savedOrders && savedOrders !== "[]") {
+            setOrders(JSON.parse(savedOrders));
+            console.log("✅ Loaded Orders from Local Storage:", JSON.parse(savedOrders));
+        }
+    }, []);
+
+    const addToCart = (itemId, size) => {
         if (!size) {
-            toast.error('Select Product Size');
+            toast.error("Select Product Size");
             return;
         }
 
         let cartData = structuredClone(cartItems);
+        cartData[itemId] = cartData[itemId] || {};
+        cartData[itemId][size] = (cartData[itemId][size] || 0) + 1;
 
-        if (cartData[itemId]) {
-            if (cartData[itemId][size]) {
-                cartData[itemId][size] += 1;
-            } else {
-                cartData[itemId][size] = 1;
-            }
-        } else {
-            cartData[itemId] = {};
-            cartData[itemId][size] = 1;
-        }
         setCartItems(cartData);
     };
 
@@ -37,19 +38,15 @@ const ShopContextProvider = (props) => {
         let totalCount = 0;
         for (const items in cartItems) {
             for (const item in cartItems[items]) {
-                try {
-                    if (cartItems[items][item] > 0) {
-                        totalCount += cartItems[items][item];
-                    }
-                } catch (error) {
-                    console.error(error);
+                if (cartItems[items][item] > 0) {
+                    totalCount += cartItems[items][item];
                 }
             }
         }
         return totalCount;
     };
 
-    const updateQuantity = async (itemId, size, quantity) => {
+    const updateQuantity = (itemId, size, quantity) => {
         let cartData = structuredClone(cartItems);
         cartData[itemId][size] = quantity;
         setCartItems(cartData);
@@ -70,7 +67,7 @@ const ShopContextProvider = (props) => {
         return totalAmount;
     };
 
-    const placeOrder = () => {
+    const placeOrder = async () => {
         if (Object.keys(cartItems).length === 0) {
             toast.error("Your cart is empty!");
             return;
@@ -79,29 +76,23 @@ const ShopContextProvider = (props) => {
         let newOrder = {
             orderId: Date.now(),
             items: cartItems,
-            date: new Date().toLocaleDateString()
+            date: new Date().toLocaleDateString(),
         };
 
-        console.log("Before placing order:", orders);
+        setOrders((prevOrders) => {
+            const updatedOrders = [...prevOrders, newOrder];
 
-        setOrders((prevOrders) => [...prevOrders, newOrder]); 
-        setCartItems({}); 
+            // ✅ Save orders to local storage **AFTER** state updates
+            setTimeout(() => {
+                localStorage.setItem("orders", JSON.stringify(updatedOrders));
+                console.log("✅ Orders Saved to Local Storage:", updatedOrders);
+            }, 100); // Small delay ensures state update
 
-        console.log("After placing order:", orders); // Debugging log
+            return updatedOrders;
+        });
+
+        setCartItems({});
     };
-
-    useEffect(() => {
-        localStorage.setItem("orders", JSON.stringify(orders));
-    }, [orders]);
-
-    useEffect(() => {
-        const savedOrders = localStorage.getItem("orders");
-        if (savedOrders) setOrders(JSON.parse(savedOrders));
-    }, []);
-
-    useEffect(() => {
-        console.log("Updated Cart Items:", cartItems);
-    }, [cartItems]);
 
     const value = {
         Products: products,
@@ -128,4 +119,3 @@ const ShopContextProvider = (props) => {
 };
 
 export default ShopContextProvider;
-
